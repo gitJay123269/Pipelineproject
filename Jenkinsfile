@@ -89,11 +89,8 @@ pipeline{
                     
                     stage("Integration test"){
 
-                            agent{
-
-                                docker {
-                                    image "ubuntu"
-                                }
+                            agent docker{
+                                image "ubuntu"
                             }
                             steps{
                                     
